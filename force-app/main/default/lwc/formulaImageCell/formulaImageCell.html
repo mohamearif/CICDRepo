@@ -1,0 +1,17 @@
+<template>
+    <template for:each={resolvedIcons} for:item="icon">
+        <lightning-icon
+            key={icon.key}
+            icon-name={icon.iconName}
+            size="x-small"
+            alternative-text={icon.alternativeText}
+            title={icon.title}
+            class="slds-m-right_xx-small"
+        ></lightning-icon>
+    </template>
+    <template if:false={hasIcons}>
+        <template if:true={hasValue}>
+            <span class="slds-text-body_small slds-text-color_weak">{value}</span>
+        </template>
+    </template>
+</template>
